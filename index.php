@@ -37,13 +37,38 @@ echo $user;
 ////////////////////////////////////////
 
 // Valida login e senha
-$login = new Usuario();
+//$login = new Usuario();
 
-$login->valid("Selma","@#$!");
+//$login->valid("Selma","@#$!");
 
-echo $login;
+//echo $login;
 
-//echo json_encode($pesq);
+////////////////////////////////////////
 
+// Valida login e senha
+//$login = new Usuario();
+
+//$login->valid("Selma","@#$!");
+
+//echo $login;
+
+
+////////////////////////////////////////
+// Cadastra novo usuário
+//$aluno = new Usuario("Aluno", "@lun0");
+
+//$aluno->insert();
+
+//echo $aluno;
+
+////////////////////////////////////////
+// Atualiza novo usuário
+$usuario = new Usuario();
+
+$usuario->loadByid(3);
+
+$usuario->update("Elder Leite", "7654321");
+
+echo $usuario;
 
 ?>
