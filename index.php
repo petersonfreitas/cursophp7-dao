@@ -63,11 +63,21 @@ echo $user;
 
 ////////////////////////////////////////
 // Atualiza novo usuário
+//$usuario = new Usuario();
+
+//$usuario->loadByid(3);
+
+//$usuario->update("Elder Leite", "7654321");
+
+//echo $usuario;
+
+////////////////////////////////////////
+// Atualiza novo usuário
 $usuario = new Usuario();
 
-$usuario->loadByid(3);
+$usuario->loadByid(5);
 
-$usuario->update("Elder Leite", "7654321");
+$usuario->delete();
 
 echo $usuario;
 

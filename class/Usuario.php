@@ -160,6 +160,23 @@ class Usuario {
 		);
 	}
 
+	// Método deletar dados
+	public function delete() {
+
+		$sql = new Sql();
+
+		$sql->query("DELETE FROM tb_usuarios WHERE idusuario = :ID", array(
+			':ID'=>$this->getIdusuario())
+		);
+		
+		// limpando o rastro do comando delete
+		$this->setIdusuario(0);
+		$this->setDeslogin("");
+		$this->setDessenha("");
+		//formatando a data do banco de dados para nosso pais
+		$this->setDtcadastro(new DateTime(""));
+	}
+
 	/********************/
 
 	public function __toString() {
